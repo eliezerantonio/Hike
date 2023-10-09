@@ -10,7 +10,7 @@ import SwiftUI
 struct CardView: View {
     // MARK: - proprieties
 
-    @State private var imageNumber: Int = 1
+    @State private var imageNumber:  Int = 1
     @State private var randomNumber: Int = 1
 
     // MARK: Functions
@@ -41,7 +41,7 @@ struct CardView: View {
                                 colors: [.customGrayLight, .customGrayMedium],
                                 startPoint: .top, endPoint: .bottom
                             )
-                            )
+                        )
                         Spacer()
                         Button {
                             // ACTIOn show a sheet
@@ -57,17 +57,7 @@ struct CardView: View {
                 // MARK: - MAIN CONTENT
 
                 ZStack {
-                    Circle()
-                        .fill(LinearGradient(
-                            colors: [
-                                Color("ColorIndigoMedium"),
-                                Color("ColorSalmonLight"),
-                            ],
-                            startPoint: .topLeading,
-                            endPoint: .bottomTrailing
-                        )
-                        )
-                        .frame(width: 256, height: 256)
+                   CustomCircleView()
                     Image("image-\(imageNumber)")
                         .resizable()
                         .scaledToFit()
