@@ -15,6 +15,7 @@
 		D78112272AD4B30100146041 /* CustomCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78112262AD4B30100146041 /* CustomCircleView.swift */; };
 		D78112292AD4B6D800146041 /* MotionAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78112282AD4B6D800146041 /* MotionAnimationView.swift */; };
 		D781122C2AD4C27A00146041 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D781122B2AD4C27A00146041 /* SettingsView.swift */; };
+		D781122E2AD4D40D00146041 /* CustomListRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D781122D2AD4D40D00146041 /* CustomListRowView.swift */; };
 		D7F184FB2AD05F2700CF3370 /* HikeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F184FA2AD05F2700CF3370 /* HikeApp.swift */; };
 		D7F184FD2AD05F2700CF3370 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F184FC2AD05F2700CF3370 /* ContentView.swift */; };
 		D7F184FF2AD05F2900CF3370 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7F184FE2AD05F2900CF3370 /* Assets.xcassets */; };
@@ -50,6 +51,7 @@
 		D78112262AD4B30100146041 /* CustomCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCircleView.swift; sourceTree = "<group>"; };
 		D78112282AD4B6D800146041 /* MotionAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionAnimationView.swift; sourceTree = "<group>"; };
 		D781122B2AD4C27A00146041 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		D781122D2AD4D40D00146041 /* CustomListRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomListRowView.swift; sourceTree = "<group>"; };
 		D7F184F72AD05F2700CF3370 /* Hike.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hike.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7F184FA2AD05F2700CF3370 /* HikeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HikeApp.swift; sourceTree = "<group>"; };
 		D7F184FC2AD05F2700CF3370 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 				D76500702AD4A3E9005ED98B /* CustomButtonView.swift */,
 				D78112262AD4B30100146041 /* CustomCircleView.swift */,
 				D78112282AD4B6D800146041 /* MotionAnimationView.swift */,
+				D781122D2AD4D40D00146041 /* CustomListRowView.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -307,6 +310,7 @@
 			files = (
 				D765006A2AD48996005ED98B /* CustomBackgroundView.swift in Sources */,
 				D78112272AD4B30100146041 /* CustomCircleView.swift in Sources */,
+				D781122E2AD4D40D00146041 /* CustomListRowView.swift in Sources */,
 				D78112252AD4AD4500146041 /* GradiantButtonStyle.swift in Sources */,
 				D7F184FD2AD05F2700CF3370 /* ContentView.swift in Sources */,
 				D765006C2AD48D28005ED98B /* CardView.swift in Sources */,

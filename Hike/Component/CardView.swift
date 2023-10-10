@@ -10,19 +10,18 @@ import SwiftUI
 struct CardView: View {
     // MARK: - proprieties
 
-    @State private var imageNumber:  Int = 1
+    @State private var imageNumber: Int = 1
     @State private var randomNumber: Int = 1
+    @State private var isShowingSheet: Bool = false
 
     // MARK: Functions
 
     func randomImage() {
-
         repeat {
             randomNumber = Int.random(in: 1 ... 5)
-        } while randomNumber ==  imageNumber
-       
-        imageNumber  = randomNumber
-        
+        } while randomNumber == imageNumber
+
+        imageNumber = randomNumber
     }
 
     var body: some View {
@@ -41,23 +40,29 @@ struct CardView: View {
                                 colors: [.customGrayLight, .customGrayMedium],
                                 startPoint: .top, endPoint: .bottom
                             )
-                        )
+                            )
                         Spacer()
                         Button {
                             // ACTIOn show a sheet
-
-                            print("the button was pressed.")
+                            isShowingSheet.toggle()
                         } label: {
                             CustomButtonView()
+                        }.sheet(isPresented: $isShowingSheet) {
+                            SettingsView()
+                                .presentationDragIndicator(.visible)
+                                .presentationDetents([.medium, .large])
                         }
                     }
-                    Text("Fun and enjoyable outdoor activity for friends and families").multilineTextAlignment(/*@START_MENU_TOKEN@*/ .leading/*@END_MENU_TOKEN@*/).italic().foregroundColor(.customGrayMedium)
+                    Text("Fun and enjoyable outdoor activity for friends and families")
+                        .multilineTextAlignment(/*@START_MENU_TOKEN@*/ .leading/*@END_MENU_TOKEN@*/)
+                        .italic()
+                        .foregroundColor(.customGrayMedium)
                 }.padding(.horizontal, 30)
 
                 // MARK: - MAIN CONTENT
 
                 ZStack {
-                   CustomCircleView()
+                    CustomCircleView()
                     Image("image-\(imageNumber)")
                         .resizable()
                         .scaledToFit()
