@@ -8,6 +8,18 @@
 import SwiftUI
 
 struct SettingsView: View {
+    
+    // MARK: - PROPERTIES
+    
+    private let alternateAppIcons: [String] = [
+    "AppIcon-MagnifyingGlass",
+    "AppIcon-Map",
+    "AppIcon-Mushroom",
+    "AppIcon-Camera",
+    "AppIcon-Backpack",
+    "AppIcon-Campfire"
+    ]
+    
     var body: some View {
         List {
             // MARK: - SECTION HEADER
@@ -65,6 +77,37 @@ struct SettingsView: View {
 
             // MARK: - SECTION: ICONS
 
+            Section(header: Text("Alternate Icons")){
+                ScrollView(.horizontal, showsIndicators: false){
+                    HStack (spacing: 12) {
+                        ForEach(alternateAppIcons.indices, id: \.self) { item in
+                            Button {
+                                UIApplication.shared.setAlternateIconName(alternateAppIcons[item]) { error in
+                                    if error != nil {
+                                        print("Falied requet to update app;s icon: \(String(describing: error?.localizedDescription))")
+                                    }else{
+                                        print("Success! You have chafed the app's icon to \(alternateAppIcons[item])")
+                                    }
+                                    
+                                }
+                            } label: {
+                                Image("\(alternateAppIcons[item])-Preview")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 80, height: 80)
+                                    .cornerRadius(16)
+                        }.buttonStyle(.borderless)
+                        }
+                    }
+                } 
+                // : Scroll View
+                .padding(.top, 12)
+                Text("Choose your favourite app icon fro the collectio above.")
+                    .frame(minWidth: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, maxWidth: .infinity)
+                    .foregroundColor(.secondary)
+            }.listRowSeparator(.hidden)
+                .font(.footnote)
+                .padding(.bottom, 12)
             // MARK: - SEACTION ABOUT
 
             Section(header: Text("ABOUT THE APP "),
